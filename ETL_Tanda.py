@@ -116,8 +116,8 @@ def main():
             # Ensure all rows have the same number of columns
             all_data = [row + [''] * (max_columns - len(row)) for row in all_data]
             df = pd.DataFrame(all_data, columns=['Week Date', 'Date'] + [f"Column{i+1}" for i in range(max_columns - 2)])
-            df.to_csv('data_Ahmed.csv', index=False)
-            print("Data has been successfully scraped and saved to 'data_Ahmed.csv'")
+            df.to_csv('data.csv', index=False)
+            print("Data has been successfully scraped and saved to 'data.csv'")
         else:
             print("No table data found.")
 
